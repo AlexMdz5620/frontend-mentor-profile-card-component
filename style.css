@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    height: 100vh;
+    background-color: hsl(185, 75%, 39%);
+}
+main{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+h1{
+    font-weight: 700;
+    font-size: 18px;
+
+}
+span{
+    font-weight: 400;
+    color: hsl(0, 0%, 59%);
+}
+h2{
+    font-weight: 400;
+    font-size: 16px;
+    color: hsl(227, 10%, 46%);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border-radius: .8rem;
+    z-index: 1;   
+}
+.imgContainer{
+    background-image: url(./images/bg-pattern-card.svg);
+    border-radius: .8rem .8rem 0 0;
+    height: 150px;
+}
+.fondImg{
+    position: relative;
+    top: 100px;
+    left: 145px;
+    width: 100px;
+    height: 100px;
+    background-color: hsl(0, 0%, 100%);
+    background-position: center;
+    border-radius: 100%;
+}
+.img{
+    width: 90%;
+    border-radius: 100%;
+    margin: 5px;
+}
+.infContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 0 .8rem .8rem;
+    height: 270px;
+}
+.infPerson{
+    text-align: center;
+    background-color: hsl(0, 0%, 100%);
+    line-height: 2rem;
+    margin: 25px 0;
+}
+.infRedSocial{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 25px;
+    border-top: 1px solid hsl(0, 0%, 75%);
+}
+.inf{
+    text-align: center;
+}
+.inf h2{
+    font-size: 14px;
+}
+.bg{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 20px 35px 1fr;
+    grid-template-rows: .975fr 92px .66fr;
+}
+.bgTop{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    background-image: url(images/bg-pattern-top.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+.bgButton{
+    grid-column: 2 / 5;
+    grid-row: 2 / 4;
+    background-image: url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
+/*Footer*/
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width: 375px) {
+    .container{
+        width: 300px;
+    }
+    .imgContainer{
+        height: 100px;
+    }
+    .fondImg{
+        width: 80px;
+        height: 80px;
+        top: 55px;
+        left: 105px;
+    }
+    .infContainer{
+        height: 220px;
+    }
+    .infPerson{
+        line-height: 1.5rem;
+    }
+    .bg{
+        grid-template-columns: .9fr 62px 62px 1fr;
+        grid-template-rows: 1fr 30px 30px 1.1fr;
+    }
+    .bgTop{
+        grid-column: 1 / 4;
+        grid-row: 1 / 4;
+    }
+    .bgButton{
+        grid-column: 2 / 5;
+        grid-row: 2 / 5;
+    }
+}
